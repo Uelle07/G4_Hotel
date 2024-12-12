@@ -56,9 +56,15 @@ public class HotelG4_MethodDesigns {
     //First Method Design:
     public static void main(String[] args) 
     {         
+        //Scanners
         
-        Scanner scanner = new Scanner(System.in);
-        
+        Scanner name = new Scanner(System.in);
+        Scanner program = new Scanner(System.in);
+        Scanner room_choice = new Scanner(System.in);
+        Scanner confirmation = new Scanner(System.in);
+        Scanner number_of_guests = new Scanner(System.in);
+        Scanner number_of_nights = new Scanner(System.in);        
+
         //Variables
         String Name;
         DecimalFormat df = new DecimalFormat("0.00");
@@ -88,7 +94,7 @@ public class HotelG4_MethodDesigns {
             System.out.println("Press [C] to book a room.");
             System.out.println("Press [X] anytime that you want to leave the program.");
             System.out.println();
-            Program = scanner.next().toUpperCase().charAt(0);
+            Program = program.next().toUpperCase().charAt(0);
             
             if(Program == 'X') //Put this down there for it to be able to read the Name variable
             {
@@ -103,7 +109,7 @@ public class HotelG4_MethodDesigns {
                     System.out.println();
                     System.out.println("Enter Your Name To Book A Room.");
                     System.out.print("Name: ");
-                    Name = scanner.nextLine();       
+                    Name = name.nextLine();       
 
                     if(Name.length() == 0 || Name.length() == 1) 
                     {
@@ -174,13 +180,13 @@ public class HotelG4_MethodDesigns {
                     System.out.println();
                     mainMenu();
                     System.out.print("Please Choose A Room: ");
-                    Room_Choice = scanner.next().toUpperCase().charAt(0);
+                    Room_Choice = room_choice.next().toUpperCase().charAt(0);
                    
                     switch(Room_Choice) 
                     {
                         case 'A': 
                             System.out.println("Are you sure that you are choosing the Standard Room? Y/N");
-                            Confirmation = scanner.next().toUpperCase().charAt(0);
+                            Confirmation = confirmation.next().toUpperCase().charAt(0);
                             
                             if(Confirmation == 'Y') 
                             {
@@ -197,7 +203,7 @@ public class HotelG4_MethodDesigns {
                                 {
                                     System.out.println("Enter the number of guests for this room.");
                                     System.out.print("Number of Guests: ");
-                                    Number_Of_Guests = scanner.nextInt();
+                                    Number_Of_Guests = number_of_guests.nextInt();
                                     
                                     if(Number_Of_Guests > 2) 
                                     {
@@ -215,7 +221,7 @@ public class HotelG4_MethodDesigns {
                                 
                                 System.out.println();
                                 System.out.println("You have booked the Standard Room for " + Number_Of_Guests + ". Is this correct? Y/N");
-                                Confirmation = scanner.next().toUpperCase().charAt(0);
+                                Confirmation = confirmation.next().toUpperCase().charAt(0);
                                 
                                 if(Confirmation == 'Y') 
                                 {
@@ -236,7 +242,7 @@ public class HotelG4_MethodDesigns {
                                         System.out.println();
                                         System.out.println("For how many nights are you staying?");
                                         System.out.print("Number of Nights: ");
-                                        Number_Of_Nights = scanner.nextInt();
+                                        Number_Of_Nights = number_of_nights.nextInt();
                                         
                                         if(Number_Of_Nights <= -1 || Number_Of_Nights == 0) 
                                         {
@@ -248,7 +254,7 @@ public class HotelG4_MethodDesigns {
                                     
                                     System.out.println();
                                     System.out.println("You entered " + Number_Of_Nights + '.' + " Is this correct? Y/N");
-                                    Confirmation = scanner.next().toUpperCase().charAt(0);
+                                    Confirmation = confirmation.next().toUpperCase().charAt(0);
                                     
                                     if(Confirmation == 'Y') 
                                     {
@@ -303,7 +309,7 @@ public class HotelG4_MethodDesigns {
                                         System.out.println();
                                         System.out.println();
                                         System.out.println("Would you like to create another transaction? Y/N");
-                                        Confirmation = scanner.next().toUpperCase().charAt(0);
+                                        Confirmation = confirmation.next().toUpperCase().charAt(0);
                                         
                                         if(Confirmation == 'Y') 
                                         {
@@ -352,7 +358,7 @@ public class HotelG4_MethodDesigns {
                                 System.out.println();
                                 System.out.println("Press [X] if you want to Exit the Program.");
                                 System.out.println("Press [M] if you want to return to the Main Menu.");
-                                Program = scanner.next().toUpperCase().charAt(0);
+                                Program = program.next().toUpperCase().charAt(0);
                                 
                                 if(Program == 'M') 
                                 {
@@ -362,7 +368,7 @@ public class HotelG4_MethodDesigns {
                                 else if(Program == 'X') 
                                 {
                                     System.out.println("Are you sure that you want to Exit the Program? Y/N");
-                                    Confirmation = scanner.next().toUpperCase().charAt(0);
+                                    Confirmation = confirmation.next().toUpperCase().charAt(0);
                                     if(Confirmation == 'Y') 
                                     {
                                         System.out.println("You have now exited the G4 Hotel Interface. Thank You & See You Next Time!");
@@ -386,7 +392,7 @@ public class HotelG4_MethodDesigns {
                             
                         case 'B':
                             System.out.println("Are you sure that you are choosing the Deluxe Room? Y/N");
-                            Confirmation = scanner.next().toUpperCase().charAt(0);
+                            Confirmation = confirmation.next().toUpperCase().charAt(0);
                             
                             if(Confirmation == 'Y') 
                             {
@@ -403,7 +409,7 @@ public class HotelG4_MethodDesigns {
                                 {
                                     System.out.println("Enter the number of guests for this room.");
                                     System.out.print("Number of Guests: ");
-                                    Number_Of_Guests = scanner.nextInt();
+                                    Number_Of_Guests = number_of_guests.nextInt();
                                     
                                     if(Number_Of_Guests > 3) 
                                     {
@@ -422,7 +428,7 @@ public class HotelG4_MethodDesigns {
                                 System.out.println();
                                 System.out.println("You have successfully booked the Deluxe Room for " + Number_Of_Guests + '.');
                                 System.out.println("Is this correct? Y/N");
-                                Confirmation = scanner.next().toUpperCase().charAt(0);
+                                Confirmation = confirmation.next().toUpperCase().charAt(0);
                                 
                                 if(Confirmation == 'Y') 
                                 {
@@ -438,7 +444,7 @@ public class HotelG4_MethodDesigns {
                                         System.out.println();
                                         System.out.println("For how many nights are you staying?");
                                         System.out.print("Number of Nights: ");
-                                        Number_Of_Nights = scanner.nextInt();
+                                        Number_Of_Nights = number_of_nights.nextInt();
                                         
                                         if(Number_Of_Nights <= -1 || Number_Of_Nights == 0) 
                                         {
@@ -450,7 +456,7 @@ public class HotelG4_MethodDesigns {
                                     
                                     System.out.println();
                                     System.out.println("You entered " + Number_Of_Nights + '.' + "Is this correct? Y/N");
-                                    Confirmation = scanner.next().toUpperCase().charAt(0);
+                                    Confirmation = confirmation.next().toUpperCase().charAt(0);
                                     
                                     if(Confirmation == 'Y') 
                                     {
@@ -533,7 +539,7 @@ public class HotelG4_MethodDesigns {
                                         System.out.println();
                                         System.out.println();
                                         System.out.println("Would you like to create another transaction? Y/N");
-                                        Confirmation = scanner.next().toUpperCase().charAt(0);
+                                        Confirmation = confirmation.next().toUpperCase().charAt(0);
                                         
                                         if(Confirmation == 'Y') 
                                         {
@@ -580,7 +586,7 @@ public class HotelG4_MethodDesigns {
                                 System.out.println();
                                 System.out.println("Press [X] if you want to Exit the Program.");
                                 System.out.println("Press [M] if you want to return to the Main Menu.");
-                                Program = scanner.next().toUpperCase().charAt(0);
+                                Program = program.next().toUpperCase().charAt(0);
                                 
                                 if(Program == 'M') 
                                 {
@@ -590,7 +596,7 @@ public class HotelG4_MethodDesigns {
                                 else if(Program == 'X') 
                                 {
                                     System.out.println("Are you sure that you want to Exit the Program? Y/N");
-                                    Confirmation = scanner.next().toUpperCase().charAt(0);
+                                    Confirmation = confirmation.next().toUpperCase().charAt(0);
                                     if(Confirmation == 'Y') 
                                     {
                                         System.out.println("You have now exited the G4 Hotel Interface. Thank You & See You Next Time!");
@@ -614,7 +620,7 @@ public class HotelG4_MethodDesigns {
                             
                             case 'C':
                                 System.out.println("Are you sure that you are choosing the Suite Room? Y/N");
-                                Confirmation = scanner.next().toUpperCase().charAt(0);
+                                Confirmation = confirmation.next().toUpperCase().charAt(0);
 
                                 if(Confirmation == 'Y') 
                                 {
@@ -631,7 +637,7 @@ public class HotelG4_MethodDesigns {
                                     {
                                         System.out.println("Enter the number of guests for this room.");
                                         System.out.print("Number of Guests: ");
-                                        Number_Of_Guests = scanner.nextInt();
+                                        Number_Of_Guests = number_of_guests.nextInt();
 
                                         if(Number_Of_Guests > 6) 
                                         {
@@ -650,7 +656,7 @@ public class HotelG4_MethodDesigns {
                                     System.out.println();
                                     System.out.println("You have successfully booked the Suite Room for " + Number_Of_Guests + '.');
                                     System.out.println("Is this correct? Y/N");
-                                    Confirmation = scanner.next().toUpperCase().charAt(0);
+                                    Confirmation = confirmation.next().toUpperCase().charAt(0);
 
                                     if(Confirmation == 'Y') 
                                     {
@@ -666,7 +672,7 @@ public class HotelG4_MethodDesigns {
                                             System.out.println();
                                             System.out.println("For how many nights are you staying?");
                                             System.out.print("Number of Nights: ");
-                                            Number_Of_Nights = scanner.nextInt();
+                                            Number_Of_Nights = number_of_nights.nextInt();
 
                                             if(Number_Of_Nights <= -1 || Number_Of_Nights == 0) 
                                             {
@@ -678,7 +684,7 @@ public class HotelG4_MethodDesigns {
 
                                         System.out.println();
                                         System.out.println("You entered " + Number_Of_Nights + '.' + "Is this correct? Y/N");
-                                        Confirmation = scanner.next().toUpperCase().charAt(0);
+                                        Confirmation = confirmation.next().toUpperCase().charAt(0);
 
                                         if(Confirmation == 'Y') 
                                         {
@@ -797,7 +803,7 @@ public class HotelG4_MethodDesigns {
                                             System.out.println();
                                             System.out.println();
                                             System.out.println("Would you like to create another transaction? Y/N");
-                                            Confirmation = scanner.next().toUpperCase().charAt(0);
+                                            Confirmation = confirmation.next().toUpperCase().charAt(0);
                                             
                                             if(Confirmation == 'Y') 
                                             {
@@ -844,7 +850,7 @@ public class HotelG4_MethodDesigns {
                                     System.out.println();
                                     System.out.println("Press [X] if you want to Exit the Program.");
                                     System.out.println("Press [M] if you want to return to the Main Menu.");
-                                    Program = scanner.next().toUpperCase().charAt(0);
+                                    Program = program.next().toUpperCase().charAt(0);
 
                                     if(Program == 'M') 
                                     {
@@ -854,7 +860,7 @@ public class HotelG4_MethodDesigns {
                                     else if(Program == 'X') 
                                     {
                                         System.out.println("Are you sure that you want to Exit the Program? Y/N");
-                                        Confirmation = scanner.next().toUpperCase().charAt(0);
+                                        Confirmation = confirmation.next().toUpperCase().charAt(0);
                                         if(Confirmation == 'Y') 
                                         {
                                             System.out.println("You have now exited the G4 Hotel Interface. Thank You & See You Next Time!");
@@ -880,7 +886,7 @@ public class HotelG4_MethodDesigns {
                             case 'X':
                                 System.out.println();
                                 System.out.println("Are you sure that you want to Exit the Program? Y/N");
-                                Confirmation = scanner.next().toUpperCase().charAt(0);
+                                Confirmation = confirmation.next().toUpperCase().charAt(0);
                                 if(Confirmation == 'Y') 
                                 {
                                   System.out.println("Thank you. Till we see you again at G4 Hotel, bye!");
