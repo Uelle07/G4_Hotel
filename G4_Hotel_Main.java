@@ -877,12 +877,11 @@ public class HotelG4_MethodDesigns {
                                     System.out.println("With that, you have been returned to the Main Menu.");
                                     System.out.println();
                                     break;
-                                }
-
+                                }        
+                        }
                     }
                 }
             } 
-
         }
     }        
 }
