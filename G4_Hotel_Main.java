@@ -504,13 +504,39 @@ public class HotelG4_MethodDesigns {
                                             {
                                                 Total_Bill = deluxe_room_price * Number_Of_Guests * Number_Of_Nights;
                                                 Total_Bill_VAT = Total_Bill * 0.12 + Total_Bill;
-                                                System.out.println("_____________________________________________");
+                                                VAT_Calculation_Deluxe = Total_Bill * 0.12;
+                                                Guests_Receipt = deluxe_room_price * Number_Of_Guests;
+                                                Nights_Receipt = Guests_Receipt * Number_Of_Nights;
+    
+                                                System.out.println("______________________________________________________________________");
                                                 System.out.println();
-                                                System.out.println("Total Bill                    : " + "PHP " +df.format(Total_Bill));
-                                                System.out.println("Value-Added Tax (VAT)         : " + "12%");
+                                                System.out.println("Below Are The Specific Values: ");
                                                 System.out.println();
-                                                System.out.println("_____________________________________________");
-                                                System.out.println("Total Bill: PHP " + df.format(Total_Bill_VAT));                                                                              
+                                                System.out.println("Room Rate                                   : " +  "PHP " + df.format(deluxe_room_price));
+                                                System.out.println();
+                                                System.out.println("Amount Due For Each Person                  : " + "PHP " + df.format(deluxe_room_price));
+                                                System.out.println();
+                                                System.out.println("Amount Due For Each Night                   : " + "PHP " + df.format(deluxe_room_price));
+                                                System.out.println();
+                                                System.out.println("Value-Added Tax (VAT)                      : " + " 12% or PHP " + df.format(VAT_Calculation_Deluxe));
+                                                System.out.println();
+                                                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                                                System.out.println();
+                                                System.out.println("Computation Of Your Total Bill: ");
+                                                System.out.println();
+                                                System.out.println("Amount Due For Number Of Person (" +  Number_Of_Guests +")         : " + " PHP " + df.format(Guests_Receipt));
+                                                System.out.println();
+                                                System.out.println("                                                            x");
+                                                System.out.println();
+                                                System.out.println("Amount Due For The Nights Stayed (" + Number_Of_Nights + ")        : " + " PHP " + df.format(Nights_Receipt));
+                                                System.out.println();
+                                                System.out.println("                                                            +");
+                                                System.out.println();
+                                                System.out.println("Value-Added Tax (VAT)                       : " + "PHP " + df.format(VAT_Calculation_Deluxe));
+                                                System.out.println();
+                                                System.out.println("______________________________________________________________________");
+                                                System.out.println();
+                                                System.out.println("Total Amount Due                            : " + "PHP " +df.format(Total_Bill_VAT));                                                                            
                                             }
       
                                             System.out.println();
@@ -738,12 +764,12 @@ public class HotelG4_MethodDesigns {
     
                                                 else
                                                 {
-                                                    Total_Bill = extra_Charge_Suite(Number_Of_Nights, Number_Of_Guests, suite_room_price);  
-                                                    VAT_Calculation_Suite = Total_Bill * 0.12;
+                                                    Total_Bill = suite_room_price * Number_Of_Guests * Number_Of_Nights;
                                                     Total_Bill_VAT = Total_Bill * 0.12 + Total_Bill;
-                                                    
-                                                    Guests_Receipt = Total_Bill * Number_Of_Guests;
+                                                    VAT_Calculation_Suite = Total_Bill * 0.12;
+                                                    Guests_Receipt = suite_room_price * Number_Of_Guests;
                                                     Nights_Receipt = Guests_Receipt * Number_Of_Nights;
+    
                                                             
                                                     System.out.println();
                                                     System.out.println("___________________________________________________________________________");
