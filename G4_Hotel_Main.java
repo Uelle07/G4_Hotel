@@ -131,14 +131,17 @@ public class HotelG4_MethodDesigns {
                             case 'F':{
                                 System.out.println();
                                 System.out.println("Welcome to the G4 Hotel Ms./Ma'am " + Name + ", Where Your Comfort And Security Is Our Utmost Priority!");
+                                break;
                             }
                             case 'M':{
                                 System.out.println();
                                 System.out.println("Welcome to the G4 Hotel Mr./Sir " + Name + ", Where Your Comfort And Security Is Our Utmost Priority!"); 
+                                break;
                             }
                             case 'R':{
                                 System.out.println();
                                 System.out.println("Welcome to the G4 Hotel Mx. " + Name + ", where your comfort and security is our utmost priority!"); 
+                                break;
                             }
                         } 
                         break;
