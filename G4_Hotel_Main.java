@@ -111,7 +111,7 @@ public class HotelG4_MethodDesigns {
     
                     }while(Name.length() == 0 || Name.length() == 1);
     
-                    System.out.println();
+                     System.out.println();
                     System.out.println("---------------------------------------------------");
                     System.out.println("How would you like us to address you?");
                     System.out.println();
@@ -123,31 +123,29 @@ public class HotelG4_MethodDesigns {
                     System.out.println("---------------------------------------------------");
                     char Gender = input.next().toUpperCase().charAt(0);
                     
-                    switch(Gender){
-                        case 'F':{
-                            System.out.println();
-                            System.out.println("Welcome to the G4 Hotel Ms./Ma'am " + Name + ", Where Your Comfort And Security Is Our Utmost Priority!");
-                            break;  
-                        }
-                        case 'M':{
-                            System.out.println();
-                            System.out.println("Welcome to the G4 Hotel Mr./Sir " + Name + ", Where Your Comfort And Security Is Our Utmost Priority!");  
-                            break;  
-                        }
-                        case 'R':{
-                            System.out.println();
-                            System.out.println("Welcome to the G4 Hotel Mx. " + Name + ", where your comfort and security is our utmost priority!"); 
-                            break;    
-                        }
-                        default:{
-                            System.out.println("Please enter a valid code.");
-                            System.out.print("Enter: ");
-                            Gender = input.next().toUpperCase().charAt(0);
-                            
-                        }
+                    if(Gender == 'F') 
+                    {
+                        System.out.println();
+                        System.out.println("Welcome to the G4 Hotel Ms./Ma'am " + Name + ", Where Your Comfort And Security Is Our Utmost Priority!");      
                     }
+                    else if(Gender == 'M') 
+                    {
+                        System.out.println();
+                        System.out.println("Welcome to the G4 Hotel Mr./Sir " + Name + ", Where Your Comfort And Security Is Our Utmost Priority!");      
+                    }
+                    else if(Gender == 'R') 
+                    {
+                        System.out.println();
+                        System.out.println("Welcome to the G4 Hotel Mx. " + Name + ", where your comfort and security is our utmost priority!");      
+                    }
+                    else
+                    {   
                         do
                         {
+                            System.out.println("Please enter a valid code.");
+                            System.out.println("Enter: ");
+                            Gender = input.next().toUpperCase().charAt(0);                
+                            
                             if(Gender == 'F') 
                             {
                                 System.out.println();
