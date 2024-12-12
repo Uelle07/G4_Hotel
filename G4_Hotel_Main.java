@@ -432,7 +432,7 @@ public class HotelG4_MethodDesigns {
                                         }while(Number_Of_Nights <= -1 || Number_Of_Nights == 0);
                                         
                                         System.out.println();
-                                        System.out.println("You entered " + Number_Of_Nights + '.' + "Is this correct? Y/N");
+                                        System.out.println("You entered " + Number_Of_Nights + ". Is this correct? Y/N");
                                         Confirmation = input.next().toUpperCase().charAt(0);
                                         
                                         if(Confirmation == 'Y') 
@@ -660,7 +660,7 @@ public class HotelG4_MethodDesigns {
                                             }while(Number_Of_Nights <= -1 || Number_Of_Nights == 0);
     
                                             System.out.println();
-                                            System.out.println("You entered " + Number_Of_Nights + '.' + "Is this correct? Y/N");
+                                            System.out.println("You entered " + Number_Of_Nights + ". Is this correct? Y/N");
                                             Confirmation = input.next().toUpperCase().charAt(0);
     
                                             if(Confirmation == 'Y') 
