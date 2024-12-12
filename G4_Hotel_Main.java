@@ -141,6 +141,7 @@ public class HotelG4_MethodDesigns {
                                 System.out.println("Welcome to the G4 Hotel Mx. " + Name + ", where your comfort and security is our utmost priority!"); 
                             }
                         } 
+                        break;
                     }
                     else {
                         System.out.println();
